@@ -1,0 +1,184 @@
+# Anomaly Detection Pipeline Configuration
+
+# Data Sources
+data_sources:
+  kafka:
+    bootstrap_servers: "localhost:9092"
+    topic: "log-stream"
+    group_id: "anomaly-detection"
+    auto_offset_reset: "latest"
+  
+  file:
+    path: "data/sample_logs.jsonl"
+    batch_size: 1000
+    max_lines: 100000
+
+# Log Parsing
+log_parsing:
+  timestamp_format: "%Y-%m-%d %H:%M:%S"
+  default_levels: ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
+  custom_patterns:
+    - name: "http_request"
+      pattern: r'(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) \[(\w+)\] (\w+) (\S+) (\d+)'
+    - name: "database_query"
+      pattern: r'(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) DB_QUERY: (\w+) duration=(\d+\.\d+)'
+
+# Feature Engineering
+feature_engineering:
+  time_features:
+    - hour_of_day
+    - day_of_week
+    - is_weekend
+    - is_business_hour
+  
+  text_features:
+    - log_level_encoding
+    - message_length
+    - word_count
+    - special_char_count
+    - url_count
+    - ip_count
+  
+  statistical_features:
+    - rolling_mean_1h
+    - rolling_std_1h
+    - rolling_count_1h
+    - rolling_error_rate_1h
+
+# ML Models Configuration
+models:
+  isolation_forest:
+    contamination: 0.1
+    n_estimators: 100
+    max_samples: "auto"
+    random_state: 42
+  
+  one_class_svm:
+    kernel: "rbf"
+    nu: 0.1
+    gamma: "scale"
+  
+  autoencoder:
+    encoding_dim: 32
+    hidden_dims: [64, 32]
+    dropout_rate: 0.2
+    learning_rate: 0.001
+    epochs: 50
+    batch_size: 32
+  
+  lstm:
+    sequence_length: 100
+    hidden_size: 64
+    num_layers: 2
+    dropout_rate: 0.2
+    learning_rate: 0.001
+    epochs: 50
+    batch_size: 32
+
+# Rule-based Methods
+rule_based:
+  statistical:
+    z_score_threshold: 3.0
+    iqr_multiplier: 1.5
+    rolling_window: 3600  # 1 hour
+  
+  pattern_matching:
+    error_patterns:
+      - "ERROR"
+      - "Exception"
+      - "Failed"
+      - "Timeout"
+    warning_patterns:
+      - "WARNING"
+      - "Deprecated"
+      - "Slow"
+  
+  frequency_based:
+    max_errors_per_minute: 10
+    max_warnings_per_minute: 50
+    max_requests_per_second: 1000
+
+# Evaluation Metrics
+evaluation:
+  metrics:
+    - precision
+    - recall
+    - f1_score
+    - roc_auc
+    - average_precision
+  
+  thresholds:
+    precision_threshold: 0.8
+    recall_threshold: 0.7
+    f1_threshold: 0.75
+  
+  cross_validation:
+    n_splits: 5
+    test_size: 0.2
+
+# Alerting
+alerts:
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    sender_email: "alerts@company.com"
+  
+  webhook:
+    enabled: true
+    url: "http://localhost:8080/webhook"
+    timeout: 30
+  
+  slack:
+    enabled: false
+    webhook_url: ""
+    channel: "#alerts"
+
+# Monitoring
+monitoring:
+  prometheus:
+    enabled: true
+    port: 9090
+    metrics:
+      - anomaly_detection_rate
+      - false_positive_rate
+      - processing_latency
+      - throughput
+  
+  grafana:
+    enabled: true
+    port: 3000
+    dashboards:
+      - anomaly_overview
+      - model_performance
+      - system_metrics
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: false
+  workers: 4
+  timeout: 30
+
+# Database
+database:
+  redis:
+    host: "localhost"
+    port: 6379
+    db: 0
+  
+  postgres:
+    host: "localhost"
+    port: 5432
+    database: "anomaly_detection"
+    username: "postgres"
+    password: "password"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/anomaly_detection.log"
+  max_size: "100MB"
+  backup_count: 5 

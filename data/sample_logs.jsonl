@@ -1,0 +1,53 @@
+{"timestamp": "2024-01-15 09:15:23", "level": "INFO", "message": "User login successful", "source": "auth_service", "user_id": "user123", "ip_address": "192.168.1.100"}
+{"timestamp": "2024-01-15 09:15:25", "level": "INFO", "message": "Database query executed", "source": "database", "duration": 0.045, "query_type": "SELECT"}
+{"timestamp": "2024-01-15 09:15:30", "level": "ERROR", "message": "Connection timeout", "source": "api_gateway", "error_code": "TIMEOUT_001"}
+{"timestamp": "2024-01-15 09:15:35", "level": "WARNING", "message": "High memory usage detected", "source": "monitoring", "memory_usage": 85.2}
+{"timestamp": "2024-01-15 09:16:00", "level": "INFO", "message": "HTTP GET /api/users", "source": "web_server", "method": "GET", "url": "/api/users", "status_code": 200, "response_size": 1024}
+{"timestamp": "2024-01-15 09:16:05", "level": "ERROR", "message": "Database connection failed", "source": "database", "error_code": "DB_CONN_001"}
+{"timestamp": "2024-01-15 09:16:10", "level": "INFO", "message": "Cache miss", "source": "cache_service", "cache_key": "user_profile_123"}
+{"timestamp": "2024-01-15 09:16:15", "level": "INFO", "message": "Email sent successfully", "source": "email_service", "recipient": "user@example.com"}
+{"timestamp": "2024-01-15 09:16:20", "level": "ERROR", "message": "Invalid authentication token", "source": "auth_service", "error_code": "AUTH_001"}
+{"timestamp": "2024-01-15 09:16:25", "level": "INFO", "message": "File uploaded", "source": "file_service", "file_size": 2048576, "file_type": "image/jpeg"}
+{"timestamp": "2024-01-15 09:16:30", "level": "CRITICAL", "message": "System crash detected", "source": "system_monitor", "error_code": "CRASH_001"}
+{"timestamp": "2024-01-15 09:16:35", "level": "INFO", "message": "Backup completed", "source": "backup_service", "backup_size": 1073741824}
+{"timestamp": "2024-01-15 09:16:40", "level": "WARNING", "message": "Disk space low", "source": "monitoring", "disk_usage": 92.1}
+{"timestamp": "2024-01-15 09:16:45", "level": "INFO", "message": "User logout", "source": "auth_service", "user_id": "user123", "session_duration": 300}
+{"timestamp": "2024-01-15 09:16:50", "level": "ERROR", "message": "Payment processing failed", "source": "payment_service", "error_code": "PAYMENT_001", "amount": 99.99}
+{"timestamp": "2024-01-15 09:16:55", "level": "INFO", "message": "API rate limit exceeded", "source": "api_gateway", "client_ip": "203.0.113.1"}
+{"timestamp": "2024-01-15 09:17:00", "level": "INFO", "message": "Database backup started", "source": "database", "backup_type": "full"}
+{"timestamp": "2024-01-15 09:17:05", "level": "WARNING", "message": "Slow query detected", "source": "database", "query_duration": 2.5, "query_type": "SELECT"}
+{"timestamp": "2024-01-15 09:17:10", "level": "INFO", "message": "SSL certificate renewed", "source": "ssl_service", "domain": "example.com"}
+{"timestamp": "2024-01-15 09:17:15", "level": "ERROR", "message": "External API timeout", "source": "external_api", "endpoint": "https://api.external.com/data", "timeout": 30}
+{"timestamp": "2024-01-15 09:17:20", "level": "INFO", "message": "User registration", "source": "auth_service", "user_id": "user456", "email": "newuser@example.com"}
+{"timestamp": "2024-01-15 09:17:25", "level": "WARNING", "message": "Unusual login pattern", "source": "security_monitor", "user_id": "user789", "location": "192.168.1.200"}
+{"timestamp": "2024-01-15 09:17:30", "level": "INFO", "message": "Cache hit", "source": "cache_service", "cache_key": "user_profile_456", "hit_rate": 0.85}
+{"timestamp": "2024-01-15 09:17:35", "level": "ERROR", "message": "File not found", "source": "file_service", "file_path": "/uploads/missing.jpg", "error_code": "FILE_404"}
+{"timestamp": "2024-01-15 09:17:40", "level": "INFO", "message": "Email queued", "source": "email_service", "recipient": "admin@example.com", "template": "welcome"}
+{"timestamp": "2024-01-15 09:17:45", "level": "CRITICAL", "message": "Security breach detected", "source": "security_monitor", "threat_level": "high", "ip_address": "203.0.113.5"}
+{"timestamp": "2024-01-15 09:17:50", "level": "INFO", "message": "Database maintenance completed", "source": "database", "maintenance_type": "vacuum", "duration": 180}
+{"timestamp": "2024-01-15 09:17:55", "level": "WARNING", "message": "High CPU usage", "source": "monitoring", "cpu_usage": 87.3, "process": "web_server"}
+{"timestamp": "2024-01-15 09:18:00", "level": "INFO", "message": "HTTP POST /api/orders", "source": "web_server", "method": "POST", "url": "/api/orders", "status_code": 201, "request_size": 512}
+{"timestamp": "2024-01-15 09:18:05", "level": "ERROR", "message": "Database deadlock detected", "source": "database", "error_code": "DEADLOCK_001", "table": "orders"}
+{"timestamp": "2024-01-15 09:18:10", "level": "INFO", "message": "User profile updated", "source": "user_service", "user_id": "user123", "fields_updated": ["email", "phone"]}
+{"timestamp": "2024-01-15 09:18:15", "level": "WARNING", "message": "Deprecated API endpoint used", "source": "api_gateway", "endpoint": "/api/v1/users", "suggested": "/api/v2/users"}
+{"timestamp": "2024-01-15 09:18:20", "level": "INFO", "message": "Payment processed", "source": "payment_service", "amount": 149.99, "currency": "USD", "status": "success"}
+{"timestamp": "2024-01-15 09:18:25", "level": "ERROR", "message": "Memory allocation failed", "source": "application", "error_code": "MEMORY_001", "requested": "1GB"}
+{"timestamp": "2024-01-15 09:18:30", "level": "INFO", "message": "Log rotation completed", "source": "log_service", "files_rotated": 5, "total_size": "2.5GB"}
+{"timestamp": "2024-01-15 09:18:35", "level": "WARNING", "message": "Network latency high", "source": "network_monitor", "latency": 150, "threshold": 100}
+{"timestamp": "2024-01-15 09:18:40", "level": "INFO", "message": "Session created", "source": "session_service", "session_id": "sess_789", "user_id": "user456"}
+{"timestamp": "2024-01-15 09:18:45", "level": "ERROR", "message": "Configuration file not found", "source": "config_service", "file_path": "/etc/app/config.json", "error_code": "CONFIG_001"}
+{"timestamp": "2024-01-15 09:18:50", "level": "INFO", "message": "Health check passed", "source": "health_monitor", "service": "api_gateway", "response_time": 0.023}
+{"timestamp": "2024-01-15 09:18:55", "level": "CRITICAL", "message": "Database corruption detected", "source": "database", "error_code": "CORRUPTION_001", "table": "users"}
+{"timestamp": "2024-01-15 09:19:00", "level": "INFO", "message": "HTTP DELETE /api/users/123", "source": "web_server", "method": "DELETE", "url": "/api/users/123", "status_code": 204}
+{"timestamp": "2024-01-15 09:19:05", "level": "WARNING", "message": "SSL certificate expiring soon", "source": "ssl_service", "domain": "api.example.com", "days_remaining": 15}
+{"timestamp": "2024-01-15 09:19:10", "level": "INFO", "message": "Cache cleared", "source": "cache_service", "cache_type": "user_sessions", "entries_cleared": 150}
+{"timestamp": "2024-01-15 09:19:15", "level": "ERROR", "message": "External service unavailable", "source": "external_api", "service": "payment_gateway", "error_code": "SERVICE_UNAVAILABLE"}
+{"timestamp": "2024-01-15 09:19:20", "level": "INFO", "message": "User password changed", "source": "auth_service", "user_id": "user123", "password_strength": "strong"}
+{"timestamp": "2024-01-15 09:19:25", "level": "WARNING", "message": "Unusual access pattern", "source": "security_monitor", "user_id": "user789", "pattern": "rapid_requests"}
+{"timestamp": "2024-01-15 09:19:30", "level": "INFO", "message": "Database index created", "source": "database", "table": "orders", "index_name": "idx_user_id"}
+{"timestamp": "2024-01-15 09:19:35", "level": "ERROR", "message": "File upload failed", "source": "file_service", "file_name": "large_file.zip", "error_code": "UPLOAD_001", "size": 104857600}
+{"timestamp": "2024-01-15 09:19:40", "level": "INFO", "message": "Email delivery confirmed", "source": "email_service", "message_id": "msg_456", "delivery_time": 2.3}
+{"timestamp": "2024-01-15 09:19:45", "level": "CRITICAL", "message": "System overload detected", "source": "system_monitor", "load_average": 8.5, "threshold": 5.0}
+{"timestamp": "2024-01-15 09:19:50", "level": "INFO", "message": "HTTP PUT /api/users/456", "source": "web_server", "method": "PUT", "url": "/api/users/456", "status_code": 200, "request_size": 256}
+{"timestamp": "2024-01-15 09:19:55", "level": "WARNING", "message": "Database connection pool exhausted", "source": "database", "pool_size": 50, "active_connections": 48}
+{"timestamp": "2024-01-15 09:20:00", "level": "INFO", "message": "Scheduled task completed", "source": "scheduler", "task_name": "daily_cleanup", "duration": 45.2} 

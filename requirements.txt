@@ -1,0 +1,56 @@
+# Core ML and Data Processing
+scikit-learn==1.4.0
+pandas==2.2.0
+numpy==1.26.0
+scipy==1.12.0
+
+# Deep Learning
+tensorflow==2.15.0
+torch==2.2.0
+keras==2.15.0
+
+# Stream Processing
+kafka-python==2.0.2
+apache-kafka==3.6.0
+pyspark==3.5.0
+
+# Web Framework and API
+fastapi==0.110.0
+uvicorn==0.27.0
+pydantic==2.6.0
+
+# Visualization
+plotly==5.18.0
+dash==2.16.0
+matplotlib==3.8.0
+seaborn==0.13.0
+
+# Monitoring and Logging
+prometheus-client==0.20.0
+structlog==24.1.0
+python-json-logger==2.0.7
+
+# Database
+redis==5.0.0
+sqlalchemy==2.0.25
+alembic==1.13.0
+
+# Testing
+pytest==8.0.0
+pytest-asyncio==0.23.0
+pytest-cov==4.1.0
+
+# Development
+black==24.1.0
+flake8==7.0.0
+mypy==1.8.0
+
+# Jupyter
+jupyter==1.0.0
+ipykernel==6.29.0
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+click==8.1.7
+tqdm==4.66.0 
