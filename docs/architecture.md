@@ -58,6 +58,19 @@ graph TD
 
 ## Component Details
 
+### Key Distinction: ML Models vs Detection Engine
+
+**ML Models (Step 4)** are the individual algorithms that perform anomaly detection:
+- Each model (Isolation Forest, SVM, etc.) is a standalone algorithm
+- They take feature vectors as input and output anomaly scores
+- They are trained offline and deployed as artifacts
+
+**Detection Engine (Step 5)** is the orchestration layer that manages and combines these models:
+- Coordinates multiple models and their predictions
+- Handles model versioning, deployment, and serving
+- Makes final decisions about what constitutes an anomaly
+- Manages thresholds, ensemble methods, and alerting logic
+
 ### 1. Log Sources
 - **Application Logs**: Web servers, microservices, APIs
 - **System Logs**: OS events, kernel messages, systemd logs
@@ -74,18 +87,19 @@ graph TD
 - **Feature Engineer**: Transforms logs into ML-ready feature vectors
 - **Data Transformer**: Normalizes and scales features for ML models
 
-### 4. ML Models
+### 4. ML Models (Individual Algorithms)
 - **Isolation Forest**: Fast, scalable tree-based anomaly detection
 - **One-Class SVM**: Kernel-based boundary learning
 - **Local Outlier Factor**: Density-based local anomaly detection
 - **Autoencoder**: Deep learning for complex pattern recognition
 - **LSTM/RNN**: Temporal sequence modeling for log streams
 
-### 5. Detection Engine
-- **Model Registry**: Manages model versions and metadata
-- **Scoring Service**: Real-time anomaly scoring
-- **Ensemble Methods**: Combines multiple model predictions
-- **Threshold Management**: Dynamic alert thresholds
+### 5. Detection Engine (Orchestration & Decision Making)
+- **Model Registry**: Manages model versions, metadata, and deployment
+- **Scoring Service**: Real-time inference and prediction serving
+- **Ensemble Methods**: Combines predictions from multiple models for better accuracy
+- **Threshold Management**: Dynamic alert thresholds and decision logic
+- **Model Selection**: Chooses the best model(s) for each use case
 
 ### 6. Storage Layer
 - **Redis**: Caching and session management
@@ -101,12 +115,12 @@ graph TD
 
 ### Real-Time Processing
 ```
-Log Source → Kafka → Parser → Feature Engineer → ML Models → Detection → Alerting
+Log Source → Kafka → Parser → Feature Engineer → ML Models → Detection Engine → Alerting
 ```
 
 ### Batch Processing
 ```
-Log Files → File Reader → Parser → Feature Engineer → ML Models → Results → Storage
+Log Files → File Reader → Parser → Feature Engineer → ML Models → Detection Engine → Results → Storage
 ```
 
 ## Deployment Options
