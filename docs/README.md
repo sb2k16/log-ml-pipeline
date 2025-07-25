@@ -7,17 +7,18 @@
 ## Table of Contents
 
 1. [Introduction: The Evolution of Log Anomaly Detection](introduction.md)
-2. [Feature Engineering for Log Data](feature_engineering.md)
-3. [Isolation Forest: Theory, Math, and Application](isolation_forest.md)
-4. [One-Class SVM: Theory, Math, and Application](one_class_svm.md)
-5. [Local Outlier Factor: Theory, Math, and Application](lof.md)
-6. [Autoencoders: Deep Learning for Anomaly Detection](autoencoder.md)
-7. [LSTM & RNNs: Temporal Deep Learning for Logs](lstm_rnn.md)
-8. [Benchmarking ML Models for Anomaly Detection](benchmarking.md)
-9. [Cloud-Native Infrastructure: From Ingestion to Detection](infrastructure.md)
-10. [Plugging ML Models into the Pipeline](model_integration.md)
-11. [Case Studies & Practical Examples](case_studies.md)
-12. [Conclusion: The Future of Log Anomaly Detection](conclusion.md)
+2. [System Architecture: Cloud-Native Log Anomaly Detection](architecture.md)
+3. [Feature Engineering for Log Data](feature_engineering.md)
+4. [Isolation Forest: Theory, Math, and Application](isolation_forest.md)
+5. [One-Class SVM: Theory, Math, and Application](one_class_svm.md)
+6. [Local Outlier Factor: Theory, Math, and Application](lof.md)
+7. [Autoencoders: Deep Learning for Anomaly Detection](autoencoder.md)
+8. [LSTM & RNNs: Temporal Deep Learning for Logs](lstm_rnn.md)
+9. [Benchmarking ML Models for Anomaly Detection](benchmarking.md)
+10. [Cloud-Native Infrastructure: From Ingestion to Detection](infrastructure.md)
+11. [Plugging ML Models into the Pipeline](model_integration.md)
+12. [Case Studies & Practical Examples](case_studies.md)
+13. [Conclusion: The Future of Log Anomaly Detection](conclusion.md)
 
 ---
 

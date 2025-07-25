@@ -21,7 +21,7 @@ This repository includes a complete book on log anomaly detection:
 
 - **[📖 Complete Book](docs/README.md)** - Full theoretical and practical guide
 - **[🚀 Quick Start](#quick-start)** - Get running in minutes
-- **[🏗️ Architecture](#architecture)** - System design overview
+- **[🏗️ Architecture](docs/architecture.md)** - System design overview
 - **[🧠 Models](#models)** - ML model implementations
 - **[🐳 Docker Deployment](#docker-deployment)** - Production deployment guide
 
